@@ -4,6 +4,6 @@ get '/' do
   "Hello World!"
 end
 
-get "/hello/:name" do
-  "hello #{prams[:name]}”
+get "/hello/:name" do |n|
+  "hello #{n}"
 end
