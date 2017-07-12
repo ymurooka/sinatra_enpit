@@ -1,9 +1,16 @@
-require 'sinatra'
+re 'sinatra'
+require 'sinatra/reloader'
 
 get '/' do
-  "Hello World!"
+  'how are you?'
 end
 
-get "/hello/:name" do |n|
-  "hello #{n}"
+get '/path/to' do
+  "this is [/path/to]"
 end
+
+# ここから
+get '/hello/*' do |name|
+  "hello #{name}. how are you?"
+end
+# ここまでを追加
